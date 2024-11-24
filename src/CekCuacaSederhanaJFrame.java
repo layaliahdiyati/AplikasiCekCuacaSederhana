@@ -1,3 +1,6 @@
+
+import javax.swing.ImageIcon;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,12 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
      */
     public CekCuacaSederhanaJFrame() {
         initComponents();
+        buttonGroup1.add(jRadioButton1);
+        buttonGroup1.add(jRadioButton2);
+        buttonGroup1.add(jRadioButton3);
+        buttonGroup2.add(jRadioButton4);
+        buttonGroup2.add(jRadioButton5);
+        buttonGroup2.add(jRadioButton6);
     }
 
     /**
@@ -26,6 +35,8 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -37,7 +48,6 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,10 +75,18 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
         jRadioButton6.setText("Sangat Lembap");
 
         jButton1.setText("Cek");
-
-        jButton2.setText("Info");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Keluar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,21 +96,6 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
                 .addContainerGap(52, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(71, 71, 71))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(43, 43, 43))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(jButton3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -109,8 +112,18 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton4)
                             .addComponent(jRadioButton5)
-                            .addComponent(jRadioButton6))))
+                            .addComponent(jRadioButton6)
+                            .addComponent(jButton3))))
                 .addGap(20, 20, 20))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(jLabel2)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,14 +151,54 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
                 .addGap(95, 95, 95)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(44, 44, 44))
+                    .addComponent(jButton3))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (jRadioButton1.isSelected()&& jRadioButton4.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("hujan.png"));
+            jLabel2.setIcon(image);
+        }
+        if (jRadioButton1.isSelected()&& jRadioButton5.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("hujan.png"));
+            jLabel2.setIcon(image);
+        }
+        if (jRadioButton1.isSelected()&& jRadioButton6.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("hujan.png"));
+            jLabel2.setIcon(image);
+        }
+        if (jRadioButton2.isSelected()&& jRadioButton4.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("nopayung.png"));
+            jLabel2.setIcon(image);
+        }
+         if (jRadioButton2.isSelected()&& jRadioButton5.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("nopayung.png"));
+            jLabel2.setIcon(image);
+        }
+          if (jRadioButton2.isSelected()&& jRadioButton6.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("nopayung.png"));
+            jLabel2.setIcon(image);
+        }
+            if (jRadioButton3.isSelected()&& jRadioButton4.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("nopayung.png"));
+            jLabel2.setIcon(image);
+        }
+              if (jRadioButton3.isSelected()&& jRadioButton5.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("nopayung.png"));            jLabel2.setIcon(image);
+        }
+                if (jRadioButton3.isSelected()&& jRadioButton6.isSelected()){
+            ImageIcon image = new ImageIcon(getClass().getResource("hujan.png"));
+            jLabel2.setIcon(image);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,8 +236,9 @@ public class CekCuacaSederhanaJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
